@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PinHost - Pengaturan Biaya Bandwidth & Backend</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="pin"></div>
+      <div>
+        <h1>PinHost</h1>
+        <p>Website sederhana untuk mengatur biaya bandwidth dan backend hosting GitHub Pages.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Pengaturan Biaya</h2>
+      <form id="costForm">
+        <div class="field">
+          <label for="bandwidthRate">Biaya bandwidth per GB (Rp)</label>
+          <input type="number" id="bandwidthRate" min="0" value="5000" />
+        </div>
+        <div class="field">
+          <label for="bandwidthUsage">Perkiraan penggunaan bandwidth (GB/bulan)</label>
+          <input type="number" id="bandwidthUsage" min="0" value="20" />
+        </div>
+        <div class="field">
+          <label for="backendRate">Biaya backend per jam (Rp)</label>
+          <input type="number" id="backendRate" min="0" value="15000" />
+        </div>
+        <div class="field">
+          <label for="backendHours">Perkiraan jam penggunaan backend/bulan</label>
+          <input type="number" id="backendHours" min="0" value="30" />
+        </div>
+        <button type="button" id="calculateBtn">Hitung Total Biaya</button>
+      </form>
+    </section>
+
+    <section class="card result-card">
+      <h2>Ringkasan Biaya</h2>
+      <div class="result-grid">
+        <div>
+          <span>Biaya bandwidth</span>
+          <strong id="bandwidthCost">Rp 0</strong>
+        </div>
+        <div>
+          <span>Biaya backend</span>
+          <strong id="backendCost">Rp 0</strong>
+        </div>
+        <div class="total">
+          <span>Total biaya</span>
+          <strong id="totalCost">Rp 0</strong>
+        </div>
+      </div>
+      <p class="help-text">Gunakan nilai di atas untuk merencanakan pengeluaran hosting GitHub dan backend Anda.</p>
+    </section>
+
+    <footer class="footer">
+      <p>PinHost dibuat sebagai demo GitHub hosting dengan tema pin.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
